@@ -81,14 +81,11 @@ body {
 
 /* Společná výška pro všechny hlavní sekce */
 .section-header {
-    min-height: 250px;      /* nastav jednotnou výšku – uprav dle potřeby */
+    min-height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertikální vystředění */
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 20px 20px;
-    box-sizing: border-box;
 }
 
 
@@ -572,6 +569,7 @@ main, section {
     margin: 0;
     padding: 0;
 }
+
 
 
 
