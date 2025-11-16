@@ -79,6 +79,19 @@ body {
     margin: 0 auto 25px;
 }
 
+/* Společná výška pro všechny hlavní sekce */
+.section-header {
+    min-height: 250px;      /* nastav jednotnou výšku – uprav dle potřeby */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertikální vystředění */
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+
 /* --------------------------- TLAČÍTKA ---------------------------- */
 
 .btn {
@@ -553,5 +566,6 @@ body {
 .obsah {
     animation: fadeIn 0.5s ease-in-out;
 }
+
 
 
