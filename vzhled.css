@@ -1,26 +1,27 @@
-/* ---------------------- ZÁKLADNÍ ---------------------- */
+
+/* ---------------------- ZÁKLADNÍ NASTAVENÍ ---------------------- */
+
 body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     margin: 0;
-    padding: 0;
     background-color: #121212;
     color: #E0E0E0;
     line-height: 1.6;
 }
 
-a { text-decoration: none; color: inherit; }
+/* --------------------------- HLAVIČKA ---------------------------- */
 
-/* ---------------------- HLAVIČKA ---------------------- */
-.header {
+.hlavicka {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1E1E1E;
     padding: 15px 40px;
+    border-bottom: 2px solid #2C2C2C;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 .logo-container {
@@ -29,7 +30,7 @@ a { text-decoration: none; color: inherit; }
     gap: 12px;
 }
 
-.logo-container .logo {
+.logo {
     width: 55px;
     height: 55px;
     border-radius: 10px;
@@ -47,6 +48,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .menu a {
+    text-decoration: none;
     color: #AAAAAA;
     font-weight: 600;
     transition: color 0.3s, transform 0.2s;
@@ -58,10 +60,11 @@ a { text-decoration: none; color: inherit; }
     transform: translateY(-2px);
 }
 
-/* ---------------------- HERO / ÚVOD ---------------------- */
+/* --------------------------- HERO ---------------------------- */
+
 .hero {
     text-align: center;
-    padding: 80px 20px 60px;
+    padding: 0;
 }
 
 .hero h2 {
@@ -77,16 +80,36 @@ a { text-decoration: none; color: inherit; }
     margin: 0 auto 25px;
 }
 
+/* Společná výška pro všechny hlavní sekce */
 .section-header {
     min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
-/* ---------------------- KARTY ---------------------- */
+
+/* --------------------------- TLAČÍTKA ---------------------------- */
+
+.btn {
+    display: inline-block;
+    background-color: #4AA8FF;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #0078FF;
+    transform: scale(1.05);
+}
+
+/* --------------------------- KARTY ---------------------------- */
+
 .karty {
     display: flex;
     flex-wrap: wrap;
@@ -102,7 +125,7 @@ a { text-decoration: none; color: inherit; }
     width: 300px;
     padding: 25px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .card:hover {
@@ -111,90 +134,178 @@ a { text-decoration: none; color: inherit; }
     background-color: #242424;
 }
 
-.card h3 { color: #4AA8FF; margin-top: 0; }
-.card p { color: #C0C0C0; }
-.card-btn { color: #4AA8FF; font-weight: bold; display: inline-block; margin-top: 15px; }
-.card-btn:hover { text-decoration: underline; }
-
-/* ---------------------- OBSAH / HLAVNÍ SEKCE ---------------------- */
-.obsah {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    animation: fadeIn 0.5s ease-in-out;
+.card h3 {
+    margin-top: 0;
+    color: #4AA8FF;
 }
 
-.obsah h1, .obsah h2 {
-    text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 25px;
+.card p {
+    color: #C0C0C0;
 }
 
-.setup-container, .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+.card-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #4AA8FF;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.setup-box, .project-card {
-    background-color: #1d1b1b;
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.25);
-    width: 350px;
-    transition: transform 0.25s, box-shadow 0.25s;
+.card-btn:hover {
+    text-decoration: underline;
 }
 
-.setup-box:hover, .project-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 18px rgba(0,0,0,0.5);
-}
+/* -------------------------- PATIČKA --------------------------- */
 
-.project-img, .setup-img {
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.project-img:hover, .setup-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
-
-/* ---------------------- TABULKY ---------------------- */
-.perif-container { display: flex; justify-content: center; margin-top: 30px; }
-.perif-table {
-    width: 100%;
-    max-width: 800px;
-    border-collapse: collapse;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: #1F1F1F;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-}
-.perif-table th, .perif-table td { padding: 12px 16px; border-bottom: 1px solid #2C2C2C; color: #E0E0E0; text-align: left; }
-.perif-table th { background-color: #242424; font-weight: bold; }
-.perif-table tr:last-child td { border-bottom: none; }
-.perif-table tr:hover { background-color: #2C2C2C; }
-
-/* ---------------------- PATIČKA ---------------------- */
 .footer {
-    text-align: center;
-    padding: 20px;
     background-color: #1E1E1E;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
     color: #888;
     border-top: 1px solid #2C2C2C;
 }
 
-/* ---------------------- ANIMACE ---------------------- */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+/* ------------------------ OBECNÉ PRO STRÁNKY ------------------------ */
 
-/* ---------------------- LIGHTBOX ---------------------- */
+.uvod, main {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Obrázky v projektech / galerii (globální styl) */
+.setup-img, .galerie-img {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.setup-img:hover,
+.galerie-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* ------------------------- LIGHTBOX -------------------------- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+}
+
+.lightbox img:hover {
+    transform: scale(1.03);
+}
+
+/* Global */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ddd;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.header a {
+    color: #bbb;
+    margin-right: 22px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.header a:hover {
+    color: #fff;
+}
+
+.active {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+/* Layout */
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+}
+
+/* Cards */
+.project-card {
+    background-color: #1d1b1b;
+    border: 1px solid #2b2727;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+    transition: 0.25s;
+}
+
+.project-card:hover {
+    background-color: #262222;
+    transform: scale(1.02);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+
+/* Image style */
+.project-img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #00000050;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.project-img:hover {
+    transform: scale(1.03);
+}
+
+/* Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -210,3 +321,258 @@ a { text-decoration: none; color: inherit; }
     max-height: 90%;
     border-radius: 12px;
 }
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #888;
+    border-top: 1px solid #2a2a2a;
+}
+
+/* YouTube link */
+.yt-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* --------------------------- HLAVIČKA PRO PROJEKTY ---------------------------- */
+.projekty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1E1E;
+    padding: 15px 40px;
+    border-bottom: 2px solid #2C2C2C;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.projekty-header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.projekty-header .logo-container .logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.projekty-header .logo-container h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.projekty-header .menu {
+    display: flex;
+    gap: 25px;
+}
+
+.projekty-header .menu a {
+    text-decoration: none;
+    color: #AAAAAA;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.projekty-header .menu a:hover,
+.projekty-header .menu a.active {
+    color: #4AA8FF;
+    transform: translateY(-2px);
+}
+
+/* ---------------------- ZÁKLADNÍ NASTAVENÍ ---------------------- */
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+/* --------------------------- HLAVIČKA ---------------------------- */
+.hardware-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1E1E;
+    padding: 15px 40px;
+    border-bottom: 2px solid #2C2C2C;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.hardware-header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.hardware-header .logo-container .logo {
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.hardware-header .logo-container h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.hardware-header .menu {
+    display: flex;
+    gap: 25px;
+}
+
+.hardware-header .menu a {
+    text-decoration: none;
+    color: #AAAAAA;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.hardware-header .menu a:hover,
+.hardware-header .menu a.active {
+    color: #4AA8FF;
+    transform: translateY(-2px);
+}
+
+/* --------------------------- OBSAH ---------------------------- */
+.obsah {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.obsah h1, .obsah h2 {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.obsah ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.obsah ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #2C2C2C;
+}
+
+.obsah ul li b {
+    color: #4AA8FF;
+}
+
+/* --------------------------- KARTY ---------------------------- */
+.setup-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.setup-box {
+    background-color: #1F1F1F;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    width: 350px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.setup-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    background-color: #242424;
+}
+
+.setup-box h2 {
+    margin-top: 0;
+    color: #4AA8FF;
+    margin-bottom: 15px;
+}
+
+.setup-box ul li {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* --------------------------- TABULKA PERIFERIÍ ---------------------------- */
+.perif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.perif-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background-color: #1F1F1F;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.perif-table th, .perif-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #2C2C2C;
+    color: #E0E0E0;
+    text-align: left;
+}
+
+.perif-table th {
+    background-color: #242424;
+    font-weight: bold;
+}
+
+.perif-table tr:last-child td {
+    border-bottom: none;
+}
+
+.perif-table tr:hover {
+    background-color: #2C2C2C;
+}
+
+/* --------------------------- PATIČKA ---------------------------- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1E1E1E;
+    color: #888;
+    border-top: 1px solid #2C2C2C;
+}
+
+/* --------------------------- ANIMACE ---------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.obsah {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Reset defaultních marginů u sekcí, aby nedělaly prázdné místo */
+main, section {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
