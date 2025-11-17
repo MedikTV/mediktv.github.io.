@@ -561,5 +561,13 @@ body {
     text-align: center;
 }
 
+.page-title {
+    padding-top: 60px;   /* nastavíš, kolik místa má být shora */
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+
+
 
 
