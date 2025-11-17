@@ -64,7 +64,7 @@ body {
 
 .hero {
     text-align: center;
-    padding: 0;
+    padding: 80px 20px 60px;
 }
 
 .hero h2 {
@@ -79,16 +79,6 @@ body {
     max-width: 700px;
     margin: 0 auto 25px;
 }
-
-/* Společná výška pro všechny hlavní sekce */
-.section-header {
-    min-height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 
 /* --------------------------- TLAČÍTKA ---------------------------- */
 
@@ -564,15 +554,5 @@ body {
 .obsah {
     animation: fadeIn 0.5s ease-in-out;
 }
-
-/* Reset defaultních marginů u sekcí, aby nedělaly prázdné místo */
-main, section {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-
 
 
