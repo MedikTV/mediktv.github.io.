@@ -556,16 +556,17 @@ body {
 }
 
 .section-title {
-    padding-top: 70px;   /* nastavíš, kolik místa chceš nad nadpisem */
+    padding-top: 20px;   /* nastavíš, kolik místa chceš nad nadpisem */
     padding-bottom: 30px; /* a pod */
     text-align: center;
 }
 
 .page-title {
-    padding-top: 20px;   /* nastavíš, kolik místa má být shora */
+    padding-top: 10px;   /* nastavíš, kolik místa má být shora */
     padding-bottom: 25px;
     text-align: center;
 }
+
 
 
 
