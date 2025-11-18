@@ -315,7 +315,7 @@ h1 {
 /* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 7px;
     background-color: #1a1a1a;
     color: #888;
     border-top: 1px solid #2a2a2a;
@@ -572,6 +572,7 @@ body, .hlavicka, .projekty-header, .hardware-header,
 .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 
