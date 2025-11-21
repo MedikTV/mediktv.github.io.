@@ -1,91 +1,75 @@
-
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petr</title>
-    <link rel="stylesheet" href="vzhled.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petr</title>
+    <link rel="stylesheet" href="vzhled.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
-<body>
-
-<!-- HLAVIČKA -->
-<header class="hlavicka">
-    <div class="logo-container">
-        <img src="images/hlava.png" alt="Logo" class="logo">
-        <h1>NotPetaS</h1>
-    </div>
-    <nav class="menu">
-        <a href="index.html" class="active">Domů</a>
-        <a href="ome.html">O mně</a>
-        <a href="pcsetup.html">Hardware</a>
-        <a href="projekty.html">Projekty</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
-
-
-
+<body class="dark-mode"> <header class="hlavicka">
+    <div class="logo-container">
+        <img src="images/hlava.png" alt="Logo" class="logo">
+        <h1>NotPetaS</h1>
+    </div>
+    
+    <nav class="menu">
+        <a href="index.html" class="active">Domů</a>
+        <a href="ome.html">O mně</a>
+        <a href="pcsetup.html">Hardware</a>
+        <a href="projekty.html">Projekty</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+    
+        <div class="theme-switcher">
+        <button id="theme-toggle" aria-label="Přepnout tmavý/světlý režim">
+            🌙
+        </button>
+    </div>
 </header>
 
-<!-- HLAVNÍ OBSAH -->
 <main class="uvod">
-
-    <!-- HERO sekce (místo starého úvodu + fotky) -->
-    <section class="hero">
-        <h2 class="page-title">Vítej na mém webu!</h2>
-        <p>
-            Jmenuji se <strong>Petr</strong> a jsem student IT.<br>
-            Baví mě hardware, software, programování a různé menší projekty.
-        </p>
-
-        <!-- Profilová fotka ze starého webu -->
-        <img src="profil.png" alt="Já" style="
-            width: 240px;
-            border-radius: 15px;
-            margin-top: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        ">
-    </section>
-
-    <!-- 3 moderní karty -->
-    <section class="karty">
-        <div class="card">
-            <h3>Hardware</h3>
-            <p>Moje počítačové sestavy a periferie přehledně na jednom místě.</p>
-            <a href="pcsetup.html" class="card-btn">Zobrazit</a>
-        </div>
-
-        <div class="card">
-            <h3>Projekty</h3>
-            <p>Python nástroje, aplikace a experimentální projekty, které vytvářím.</p>
-            <a href="projekty.html" class="card-btn">Zobrazit</a>
-        </div>
-
-        <div class="card">
-            <h3>Galerie</h3>
-            <p>Zatial tadialto nič nieje. nnnnnnnnnnnnn,nnnnn</p>
-            <a href="galerie.html" class="card-btn">Zobrazit</a>
-        </div>
-    </section>
-
+    <section class="hero">
+        <h2 class="page-title">Vítej na mém webu!</h2>
+        <p>
+            Jmenuji se <strong>Petr</strong> a jsem student IT.<br>
+            Baví mě hardware, software, programování a různé menší projekty.
+        </p>
+        <img src="profil.png" alt="Já" style="
+            width: 240px;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        ">
+    </section>
+    <section class="karty">
+        <div class="card">
+            <h3>Hardware</h3>
+            <p>Moje počítačové sestavy a periferie přehledně na jednom místě.</p>
+            <a href="pcsetup.html" class="card-btn">Zobrazit</a>
+        </div>
+        <div class="card">
+            <h3>Projekty</h3>
+            <p>Python nástroje, aplikace a experimentální projekty, které vytvářím.</p>
+            <a href="projekty.html" class="card-btn">Zobrazit</a>
+        </div>
+        <div class="card">
+            <h3>Galerie</h3>
+            <p>Zatial tadialto nič nieje. nnnnnnnnnnnnn,nnnnn</p>
+            <a href="galerie.html" class="card-btn">Zobrazit</a>
+        </div>
+    </section>
 </main>
 
-<!-- PATIČKA -->
 <footer class="footer">
-    <p>© 2025 Petr</p>
+    <p>© 2025 Petr</p>
 </footer>
-    
+   
+<div id="lightbox" class="lightbox">
+    <img id="lightbox-img" src="" alt="">
+</div>
 
-
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
