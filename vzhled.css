@@ -52,26 +52,30 @@ body {
 .hlavicka {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo vlevo, menu uprostřed, toggle vpravo */
+    justify-content: space-between; /* logo vlevo, toggle vpravo */
     padding: 15px 40px;
     position: sticky;
     top: 0;
     background-color: var(--box);
-    border-bottom: 2px solid var(--border);
     z-index: 100;
 }
 
-/* Menu vycentrované uprostřed */
+.left {
+    display: flex;
+    align-items: center;
+}
+
 .menu {
     display: flex;
     gap: 25px;
-    margin: 0 auto; /* střed */
+    flex: 1;            /* menu zabere zbytek prostoru */
+    justify-content: center; /* menu uprostřed */
 }
 
-/* Toggle zůstane vpravo */
 .theme-toggle {
-    margin-left: auto; /* odsune toggle úplně doprava */
+    cursor: pointer;
 }
+
 
 
 .logo-container {
@@ -622,6 +626,7 @@ body, .hlavicka, .projekty-header, .hardware-header,
 .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 
