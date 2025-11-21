@@ -320,6 +320,11 @@ a {
     background-color: rgba(0,170,255,0.1);
 }
 
+.setup-box ul li b {
+    color: var(--accent);  /* použije stejnou modrou barvu jako ostatní akcenty */
+}
+
+
 
 
 
