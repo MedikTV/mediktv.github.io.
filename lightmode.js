@@ -1,19 +1,18 @@
-const toggle = document.getElementById("theme-toggle");
+// Načti uložený mód
+if (localStorage.getItem("theme") === "light") {
+    document.documentElement.classList.add("light");
+} else {
+    document.documentElement.classList.remove("light");
+}
 
-toggle.addEventListener("click", () => {
-    const html = document.documentElement;
-    if(html.classList.contains("light-theme")){
-        html.classList.remove("light-theme");
-        localStorage.setItem("theme", "dark");
-    } else {
-        html.classList.add("light-theme");
+// Přepínání po kliknutí
+document.getElementById("themeToggle").addEventListener("click", () => {
+    document.documentElement.classList.toggle("light");
+
+    // Uložení do localStorage
+    if (document.documentElement.classList.contains("light")) {
         localStorage.setItem("theme", "light");
+    } else {
+        localStorage.setItem("theme", "dark");
     }
 });
-
-// Načtení uloženého tématu
-if(localStorage.getItem("theme") === "light"){
-    document.documentElement.classList.add("light-theme");
-} else {
-    document.documentElement.classList.remove("light-theme");
-}
