@@ -276,3 +276,46 @@ body, .hlavicka, .menu a, .card, .setup-box, .project-card, .perif-table, .foote
     text-align: center;       /* zarovnání obsahu do středu */
 }
 
+/* ===== SETUP TABULKY ===== */
+.setup-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.setup-table {
+    border-collapse: collapse;
+    width: 300px;
+    background-color: var(--box);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+    overflow: hidden;
+    text-align: center;
+    transition: background-color 0.35s, color 0.35s;
+}
+
+.setup-table th {
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.setup-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+.setup-table tr:last-child td { 
+    border-bottom: none; 
+}
+
+.setup-table tr:hover { 
+    background-color: #2C2C2C; 
+    transition: 0.25s; 
+}
+
+
