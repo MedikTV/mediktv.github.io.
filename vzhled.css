@@ -46,9 +46,13 @@ body {
 }
 
 .menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
+
 
 .menu a {
     text-decoration: none;
@@ -575,6 +579,7 @@ body, .hlavicka, .projekty-header, .hardware-header,
 .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 
