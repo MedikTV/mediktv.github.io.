@@ -1,3 +1,89 @@
+:root {
+    --bg: #121212;
+    --text: #E0E0E0;
+    --box: #1F1F1F;
+    --accent: #4AA8FF;
+    --border: #2C2C2C;
+}
+
+.light {
+    --bg: #F5F5F7;
+    --text: #202020;
+    --box: #FFFFFF;
+    --accent: #2D6AE3;
+    --border: #D0D0D0;
+}
+
+/* HLAVIČKA */
+.hlavicka {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--box);
+    color: var(--text);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color .35s ease, color .35s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    justify-content: center;
+}
+
+.menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color .3s;
+}
+
+.menu a.active,
+.menu a:hover {
+    color: var(--accent);
+}
+
+/* PŘEPÍNAČ */
+.theme-toggle {
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    background-color: var(--box);
+    border: 2px solid var(--border);
+    position: relative;
+    cursor: pointer;
+    transition: background .3s, border-color .3s;
+}
+
+.toggle-ball {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: left .35s ease;
+}
+
+.light .toggle-ball {
+    left: 27px;
+}
 
 
 /* ---------------------- ZÁKLADNÍ NASTAVENÍ ---------------------- */
@@ -579,6 +665,7 @@ body, .hlavicka, .projekty-header, .hardware-header,
 .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 
