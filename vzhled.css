@@ -21,14 +21,19 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+
+    position: relative; 
 }
 
+
 .menu {
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 20px;
 }
+
 
 
 
@@ -580,6 +585,7 @@ body, .hlavicka, .projekty-header, .hardware-header,
 .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 
