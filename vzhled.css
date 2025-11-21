@@ -8,11 +8,11 @@
 }
 
 .light {
-    --bg: #F5F5F7;       /* jemná bílá */
-    --text: #202020;     
-    --box: #FFFFFF;      
-    --accent: #2D6AE3;   
-    --border: #D0D0D0;   
+    --bg: #F5F5F7;      /* celá stránka světlá */
+    --text: #202020;    /* text tmavý */
+    --box: #EFEFF2;     /* hlavička, karty, tabulky, patička */
+    --accent: #2D6AE3;  /* modrá akcentní barva */
+    --border: #D0D0D0;  /* jemné linky */
 }
 
 /* ======================= ZÁKLAD ======================= */
@@ -232,3 +232,4 @@ a {
 body, .hlavicka, .menu a, .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.35s ease, color 0.35s ease;
 }
+
