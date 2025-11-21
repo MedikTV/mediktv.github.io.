@@ -13,7 +13,7 @@ body {
 
 .hlavicka {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #1E1E1E;
     padding: 15px 40px;
@@ -572,6 +572,7 @@ body, .hlavicka, .projekty-header, .hardware-header,
 .card, .setup-box, .project-card, .perif-table, .footer {
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 
 
