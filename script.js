@@ -14,3 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
         lightbox.style.display = "none";
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // uložené téma
+    if (localStorage.getItem("theme") === "light") {
+        body.classList.add("light-theme");
+    }
+
+    toggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+
+        if (body.classList.contains("light-theme")) {
+            localStorage.setItem("theme", "light");
+        } else {
+            localStorage.setItem("theme", "dark");
+        }
+    });
+});
+
