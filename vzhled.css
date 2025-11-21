@@ -205,7 +205,6 @@ a {
     box-shadow: 0 0 15px rgba(255,255,255,0.2);
 }
 
-/* Tabulka */
 /* ===== PC Setup / Zařízení ===== */
 .setup-section {
     text-align: center;
@@ -317,6 +316,8 @@ a {
 .perif-table tr:hover {
     background-color: rgba(0,170,255,0.1);
 }
+
+
 
 
 
