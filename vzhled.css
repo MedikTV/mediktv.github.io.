@@ -1,37 +1,30 @@
-/* ======================= PROMĚNNÉ ======================= */
+/* ====== PROMĚNNÉ BARVY ====== */
 :root {
-    --bg: #121212;       /* pozadí webu */
-    --text: #E0E0E0;     /* text */
-    --box: #1F1F1F;      /* karty, hlavička, footer */
-    --accent: #4AA8FF;   /* modrá akcentní barva */
-    --border: #2C2C2C;   /* ohraničení */
+    --bg: #121212;
+    --text: #E0E0E0;
+    --box: #1F1F1F;
+    --accent: #4AA8FF;
+    --border: #2C2C2C;
 }
 
 .light {
-    --bg: #F5F5F7;      /* celá stránka světlá */
-    --text: #202020;    /* text tmavý */
-    --box: #EFEFF2;     /* hlavička, karty, tabulky, patička */
-    --accent: #2D6AE3;  /* modrá akcentní barva */
-    --border: #D0D0D0;  /* jemné linky */
+    --bg: #F7F7F7;
+    --text: #202020;
+    --box: #FFFFFF;
+    --accent: #2D6AE3;
+    --border: #D0D0D0;
 }
 
-/* ======================= ZÁKLAD ======================= */
+/* ====== ZÁKLAD ====== */
 body {
-    font-family: "Segoe UI", Tahoma, sans-serif;
     margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
     background-color: var(--bg);
     color: var(--text);
-    line-height: 1.6;
-    transition: background-color 0.35s ease, color 0.35s ease;
+    transition: background-color 0.35s, color 0.35s;
 }
 
-a {
-    text-decoration: none;
-    color: var(--text);
-    transition: color 0.3s ease;
-}
-
-/* ======================= HLAVIČKA ======================= */
+/* ====== HLAVIČKA ====== */
 .hlavicka {
     display: flex;
     align-items: center;
@@ -42,9 +35,7 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    transition: background-color 0.35s ease, color 0.35s ease;
-    position: relative;
+    transition: background-color 0.35s, color 0.35s;
 }
 
 .logo-container {
@@ -59,33 +50,25 @@ a {
     border-radius: 10px;
 }
 
-.logo-container h1 {
-    font-size: 22px;
-    margin: 0;
-    color: var(--text);
-}
-
-/* Menu vycentrované */
 .menu {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     gap: 25px;
 }
 
 .menu a {
+    text-decoration: none;
+    color: var(--text);
     font-weight: 600;
     transition: color 0.3s, transform 0.2s;
 }
 
-.menu a:hover,
-.menu a.active {
+.menu a.active,
+.menu a:hover {
     color: var(--accent);
     transform: translateY(-2px);
 }
 
-/* ======================= PŘEPÍNAČ MOTIVU ======================= */
+/* ====== PŘEPÍNAČ MOTIVU ====== */
 .theme-toggle {
     width: 50px;
     height: 26px;
@@ -94,7 +77,7 @@ a {
     border: 2px solid var(--border);
     position: relative;
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .toggle-ball {
@@ -112,168 +95,93 @@ a {
     left: 27px;
 }
 
-/* ======================= HERO ======================= */
-.hero {
-    text-align: center;
-    padding: 30px 20px 15px;
+/* ====== OBSAH ====== */
+.obsah {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-.hero h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: var(--text);
-}
-
-.hero p {
-    font-size: 18px;
-    color: var(--text);
-    max-width: 700px;
-    margin: 0 auto 25px;
-}
-
-/* ======================= KARTY ======================= */
-.karty {
+/* ====== SETUP BOXY ====== */
+.setup-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    padding: 0 20px 60px;
+    margin-bottom: 50px;
 }
 
-.card, .setup-box, .project-card {
+.setup-box {
     background-color: var(--box);
-    color: var(--text);
     border-radius: 15px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-    width: 300px;
+    width: 350px;
     padding: 25px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.35s, color 0.35s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
-.card:hover, .setup-box:hover, .project-card:hover {
+.setup-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-}
-
-/* Nadpis karty */
-.card h3, .setup-box h2, .project-card h3 {
-    color: var(--accent);
-}
-
-/* Odkazy na kartách */
-.card-btn {
-    display: inline-block;
-    margin-top: 15px;
-    color: var(--accent);
-    font-weight: bold;
-}
-
-.card-btn:hover {
-    text-decoration: underline;
-}
-
-/* ======================= PATIČKA ======================= */
-.footer {
     background-color: var(--box);
-    color: var(--text);
-    text-align: center;
-    padding: 7px;
-    font-size: 14px;
-    border-top: 1px solid var(--border);
-    transition: background-color 0.35s ease, color 0.35s ease;
 }
 
-/* ======================= OBECNÉ ======================= */
-.uvod, main {
-    animation: fadeIn 0.5s ease-in-out;
+.setup-box h2 {
+    margin-top: 0;
+    color: var(--accent);
+    margin-bottom: 15px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
+.setup-box ul li {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-/* Obrázky v projektech / galerii */
-.setup-img, .galerie-img {
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* ====== TABULKY PERIFERIÍ ====== */
+.perif-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.setup-img:hover, .galerie-img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 15px rgba(255,255,255,0.2);
-}
-
-/* Tabulka */
 .perif-table {
     width: 100%;
     max-width: 800px;
     border-collapse: collapse;
     background-color: var(--box);
-    color: var(--text);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-    transition: background-color 0.35s, color 0.35s, border-color 0.35s;
 }
 
 .perif-table th, .perif-table td {
     padding: 12px 16px;
     border-bottom: 1px solid var(--border);
-    text-align: left;
-}
-
-.perif-table th {
-    font-weight: bold;
-}
-
-/* ------------------------ Plynulé přechody pro všechny hlavní elementy ------------------------ */
-body, .hlavicka, .menu a, .card, .setup-box, .project-card, .perif-table, .footer {
-    transition: background-color 0.35s ease, color 0.35s ease;
-}
-
-.perif-container {
-    display: flex;
-    justify-content: center;   /* center horizontálně */
-    margin: 40px 0;            /* prostor shora a zdola */
-}
-
-.perif-table {
-    width: 90%;               /* tabulka zabere skoro celou šířku, ale s okraji */
-    max-width: 800px;         /* maximální šířka */
-    border-collapse: collapse;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: var(--box);
-    box-shadow: 0 3px 12px rgba(0,0,0,0.3);
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.perif-table th, .perif-table td {
-    padding: 12px 16px;
-    text-align: left;
     color: var(--text);
-    transition: color 0.3s, background-color 0.3s;
+    text-align: left;
 }
 
 .perif-table th {
     background-color: var(--accent);
     color: #fff;
-    font-weight: 600;
-    text-align: center;
+    font-weight: bold;
 }
 
-.perif-table tr:nth-child(even) {
-    background-color: rgba(255,255,255,0.05); /* lehce odlišený řádek */
+.perif-table tr:last-child td {
+    border-bottom: none;
 }
 
 .perif-table tr:hover {
-    background-color: rgba(0, 170, 255, 0.2); /* hover efekt */
+    background-color: #2C2C2C;
+    transition: background-color 0.25s;
 }
 
-.perif-table td {
-    text-align: center;       /* zarovnání obsahu do středu */
+/* ====== PATIČKA ====== */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--box);
+    color: var(--text);
+    border-top: 1px solid var(--border);
+    transition: background-color 0.35s, color 0.35s;
 }
-
-
