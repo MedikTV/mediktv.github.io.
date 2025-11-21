@@ -320,9 +320,12 @@ a {
     background-color: rgba(0,170,255,0.1);
 }
 
+/* Modré nadpisy CPU / GPU / RAM atd. v setup-box */
 .setup-box ul li b {
-    color: var(--accent);  /* použije stejnou modrou barvu jako ostatní akcenty */
+    color: var(--accent);
 }
+
+
 
 
 
