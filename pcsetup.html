@@ -1,22 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
-    <title>Petruv web</title>
-    <link rel="stylesheet" href="vzhled.css">
-    
-    <meta charset="UTF-8">
-    <title>Petruv web</title>
+    <title>Petruv web – Hardware</title>
     <link rel="stylesheet" href="vzhled.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    
 </head>
-    </nav>
+<body>
+
+<!-- HLAVIČKA -->
 <header class="hlavicka">
     <div class="logo-container">
         <img src="images/hlava.png" alt="Logo" class="logo">
-        <h1>NotPetaS</h1>
+        <h1>Petr</h1>
     </div>
 
     <nav class="menu">
@@ -25,46 +21,53 @@
         <a href="pcsetup.html" class="active">Hardware</a>
         <a href="projekty.html">Projekty</a>
         <a href="galerie.html">Galerie</a>
+        <a href="kontakt.html">Kontakt</a>
     </nav>
 
-    <div class="theme-toggle" id="themeToggle">
+    <div class="theme-toggle" id="theme-toggle">
         <div class="toggle-ball"></div>
     </div>
 </header>
 
-<!-- HLAVNÍ OBSAH -->
 <main class="obsah">
-    <h1>Moje zařízení</h1>
+    <h1 class="page-title">Moje zařízení</h1>
 
+    <!-- Hlavní PC a Notebook -->
     <div class="setup-container">
-        <div class="setup-box">
-            <h2>Hlavní PC</h2>
-            <ul>
-                <li><span class="label">CPU:</span> AMD Ryzen 5 7600</li>
-                <li><span class="label">GPU:</span> AMD Radeon RX 7700 XT</li>
-                <li><span class="label">RAM:</span> 32 GB DDR5</li>
-                <li><span class="label">SSD1:</span> 1 TB</li>
-                <li><span class="label">SSD2:</span> 1 TB</li>
-                <li><span class="label">HDD:</span> 1 TB</li>
-                <li><span class="label">Case:</span> NZXT H5</li>
-                <li><span class="label">OS:</span> Windows 11 Pro</li>
-            </ul>
-        </div>
-        <div class="setup-box">
-            <h2>Notebook</h2>
-            <ul>
-                <li><span class="label">Model:</span> Lenovo L340 Gaming</li>
-                <li><span class="label">CPU:</span> Intel Core i5-9300HF</li>
-                <li><span class="label">GPU:</span> NVIDIA GeForce GTX 1050</li>
-                <li><span class="label">RAM:</span> 16 GB DDR4</li>
-                <li><span class="label">SSD1:</span> 256 GB</li>
-                <li><span class="label">SSD2:</span> 256 GB</li>
-                <li><span class="label">OS:</span> Windows 10 Home</li>
-            </ul>
-        </div>
+        <table class="setup-table">
+            <thead>
+                <tr><th colspan="2">Hlavní PC</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>CPU</td><td>AMD Ryzen 5 7600</td></tr>
+                <tr><td>GPU</td><td>AMD Radeon RX 7700 XT</td></tr>
+                <tr><td>RAM</td><td>32 GB DDR5</td></tr>
+                <tr><td>SSD1</td><td>1 TB</td></tr>
+                <tr><td>SSD2</td><td>1 TB</td></tr>
+                <tr><td>HDD</td><td>1 TB</td></tr>
+                <tr><td>Case</td><td>NZXT H5</td></tr>
+                <tr><td>OS</td><td>Windows 11 Pro</td></tr>
+            </tbody>
+        </table>
+
+        <table class="setup-table">
+            <thead>
+                <tr><th colspan="2">Notebook</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Model</td><td>Lenovo L340 Gaming</td></tr>
+                <tr><td>CPU</td><td>Intel Core i5-9300HF</td></tr>
+                <tr><td>GPU</td><td>NVIDIA GeForce GTX 1050</td></tr>
+                <tr><td>RAM</td><td>16 GB DDR4</td></tr>
+                <tr><td>SSD1</td><td>256 GB</td></tr>
+                <tr><td>SSD2</td><td>256 GB</td></tr>
+                <tr><td>OS</td><td>Windows 10 Home</td></tr>
+            </tbody>
+        </table>
     </div>
 
-    <h2>Periferie</h2>
+    <!-- Periferie -->
+    <h2 class="page-title">Periferie</h2>
     <div class="perif-container">
         <table class="perif-table">
             <tr>
@@ -72,48 +75,18 @@
                 <th>Model</th>
                 <th>Poznámka</th>
             </tr>
-            <tr>
-                <td>Monitor hlavní</td>
-                <td>MSI G24C4</td>
-                <td>FHD, 165 Hz, 24"</td>
-            </tr>
-            <tr>
-                <td>Monitor sekundární</td>
-                <td>Philips</td>
-                <td>FHD, 100 Hz, 24"</td>
-            </tr>
-            <tr>
-                <td>Myš</td>
-                <td>Logitech G PRO Wireless</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Klávesnice</td>
-                <td>NICEBOY ORYX K445 Element</td>
-                <td>Občas nefunguje</td>
-            </tr>
+            <tr><td>Monitor hlavní</td><td>MSI G24C4</td><td>FHD, 165 Hz, 24"</td></tr>
+            <tr><td>Monitor sekundární</td><td>Philips</td><td>FHD, 100 Hz, 24"</td></tr>
+            <tr><td>Myš</td><td>Logitech G PRO Wireless</td><td></td></tr>
+            <tr><td>Klávesnice</td><td>NICEBOY ORYX K445 Element</td><td>Občas nefunguje</td></tr>
         </table>
     </div>
 </main>
 
-</div>
+<footer class="footer">
+    <p>&copy; 2025 Petr</p>
+</footer>
 
-    <script src="lightmode.js"></script>
-
+<script src="lightmode.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
