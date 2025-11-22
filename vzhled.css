@@ -89,8 +89,8 @@ a {
 
 /* ======================= PŘEPÍNAČ MOTIVU ======================= */
 .theme-toggle {
-    width: 50px;
-    height: 26px;
+    width: 55px;
+    height: 28px;
     border-radius: 50px;
     background-color: var(--box);
     border: 2px solid var(--border);
@@ -355,6 +355,7 @@ a {
 .setup-box ul li b {
     color: var(--accent);
 }
+
 
 
 
