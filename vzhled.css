@@ -240,7 +240,7 @@ a {
 .setup-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    background-color: var(--box-hover, #242424);
+    background-color: var(--box-hover);
 }
 
 .setup-box h2 {
@@ -324,6 +324,7 @@ a {
 .setup-box ul li b {
     color: var(--accent);
 }
+
 
 
 
