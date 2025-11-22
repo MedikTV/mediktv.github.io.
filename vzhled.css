@@ -114,6 +114,35 @@ a {
     left: 27px;
 }
 
+/* Ikona uvnitř kolečka */
+.toggle-ball {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: white;
+}
+
+/* DARK MODE – výchozí ikonka měsíce */
+.toggle-ball::after {
+    content: "🌙";
+}
+
+/* LIGHT MODE – ikonka slunce */
+.light .toggle-ball::after {
+    content: "☀️";
+}
+
+.toggle-ball::after {
+    transition: transform 0.3s;
+}
+
+.light .toggle-ball::after {
+    transform: rotate(180deg);
+}
+
+
+
 /* ======================= HERO ======================= */
 .hero {
     text-align: center;
@@ -326,6 +355,7 @@ a {
 .setup-box ul li b {
     color: var(--accent);
 }
+
 
 
 
