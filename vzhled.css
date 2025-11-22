@@ -5,6 +5,7 @@
     --box: #1F1F1F;      /* karty, hlavička, footer */
     --accent: #4AA8FF;   /* modrá akcentní barva */
     --border: #2C2C2C;   /* ohraničení */
+    --box-hover: #242424;
 }
 
 .light {
@@ -13,6 +14,7 @@
     --box: #EFEFF2;     /* hlavička, karty, tabulky, patička */
     --accent: #2D6AE3;  /* modrá akcentní barva */
     --border: #D0D0D0;  /* jemné linky */
+    --box-hover: #f1f1f1;
 }
 
 /* ======================= ZÁKLAD ======================= */
@@ -240,7 +242,7 @@ a {
 .setup-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    background-color: var(--box-hover, #242424);
+    background-color: var(--box-hover);
 }
 
 .setup-box h2 {
@@ -324,6 +326,7 @@ a {
 .setup-box ul li b {
     color: var(--accent);
 }
+
 
 
 
